@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="result"></p>
+<script>
+    let result = document.getElementById("result");
+    function  Temperature(doC) {
+        this.doC = doC;
+        this.doF = function () {
+            result.innerHTML = +doC + "độ C" + "=" + (this.doC * 1.8 + 32) + "độ F"
+        }
+        this.doK = function () {
+            result.innerHTML = +doC + "độ C" + "=" + (this.doC + 273) + "độ K"
+        }
+    }
+    let temp = new Temperature(25);
+    temp.doK();
+    temp.doF()
+</script>
+
+</body>
+</html>
